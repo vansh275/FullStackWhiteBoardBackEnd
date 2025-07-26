@@ -18,7 +18,7 @@ const app = express();
 // This ensures that all incoming HTTP requests, including Socket.IO's initial polling
 // preflight (OPTIONS request), are handled with the correct CORS headers.
 app.use(cors({
-  origin: ["http://localhost:3000", "https://whiteboard-tutorial-eight.vercel.app"],
+  origin: ["http://localhost:3000", "https://full-stack-white-board-front-end.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"], // Include all methods your API uses
   credentials: true // Crucial if your frontend sends cookies or Authorization headers
 }));
@@ -40,7 +40,7 @@ const server = http.createServer(app);
 // Its CORS configuration should align with the Express CORS middleware.
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: ["http://localhost:3000", "https://full-stack-white-board-front-end.vercel.app"],
     methods: ["GET", "POST"], // Socket.IO typically only needs GET/POST for polling
     credentials: true, // Keep this here as it's crucial for Socket.IO with auth headers
   },
