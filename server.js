@@ -40,7 +40,7 @@ const server = http.createServer(app);
 // Its CORS configuration should align with the Express CORS middleware.
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://full-stack-white-board-front-end.vercel.app"],
+    origin: "*",
     methods: ["GET", "POST"], // Socket.IO typically only needs GET/POST for polling
     credentials: true, // Keep this here as it's crucial for Socket.IO with auth headers
   },
