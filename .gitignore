@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.pnpm-store/
+.env
+.DS_Store
+*.log
+*.tgz
+.npm/
+.eslintcache
+.next/ # For Next.js projects
+dist/ # Common output directory for compiled code
+build/ # Another common output directory
+coverage/ # Test coverage reports
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.Trashes
+ehthumbs.db
+Thumbs.db
