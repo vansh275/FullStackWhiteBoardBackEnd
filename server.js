@@ -12,6 +12,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 const userRoutes = require("./routes/userRoutes");
 const canvasRoutes = require("./routes/canvasRoutes");
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -104,4 +105,4 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000, () => console.log("Server running on port 5000"));
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
