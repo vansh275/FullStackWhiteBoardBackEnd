@@ -11,7 +11,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 const userRoutes = require("./routes/userRoutes");
 const canvasRoutes = require("./routes/canvasRoutes");
-
+const CheckStatusRoutes = require("./routes/CheckStatusRoutes");
 const app = express();
 
 // CORS middleware
@@ -26,6 +26,7 @@ app.use(express.json());
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/canvas", canvasRoutes);
+app.use("/api/check", CheckStatusRoutes);
 
 // Connect to MongoDB
 connectToDB();
